@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta name="container" content="full"/>
+
+    <title>Programmatic&nbsp;Report</title>
+
+    <style type="text/css">
+        .tablereport th {
+            text-align: center;
+        }
+
+        pre {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            background-color: white;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: ${(xpdf or printable) ? '12px' : '14px'};
+        }
+
+        #container {
+            min-width: 310px;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.6.0/dist/chartjs-plugin-datalabels.js"></script>
+    
+    </head>
+
+    <body>
+
+        <div style="position: relative; height:20vh; width:100vh">
+            <canvas id="radarCanvas" ></canvas>
+        </div>
+
+        <div class="chart-container"></div>
+
+        <div id="svg-container"></div>
+
+        <script src="canvas2svg.js"></script>
+    </body>
+</html>
